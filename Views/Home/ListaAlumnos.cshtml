@@ -1,0 +1,50 @@
+@model IEnumerable<InterfazAlumnos.Models.Alumno>
+
+@{
+    ViewData["Title"] = "Listado de alumnos";
+}
+
+<body>
+    <h1>
+
+    </h1>
+    <div class="row">
+        <div class="col-md-3">
+            <h1>
+                Alumnos
+            </h1>
+            
+        </div>
+        <div class="col-md-3">
+            
+            
+        </div>
+        <div class="col-md-3">
+           
+        </div>
+        <div class="col-md-3">
+          
+        </div>
+
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+               
+            
+                <p>
+                    @Html.DisplayFor(modelItem=>item.Nombre)
+                </p>
+           
+                <p>
+                    @Html.DisplayFor(modelItem=>item.Apellido)
+                </p>
+            
+               
+            
+                <a asp-action="Alumno" asp-controller="Home" asp-route-id="@item.Id" class="btn btn-dark">Mostrar</a>
+            </div>
+        }
+
+    </div>
+
+</body>

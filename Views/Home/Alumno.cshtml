@@ -1,0 +1,34 @@
+@model Alumno
+@{
+    ViewData["Title"] = "Alumno";
+
+}
+<body>
+    <div class="row">
+        <div class="col-md-6">
+            <p>
+                @Html.DisplayFor(model=>model.Id)
+            </p>
+            <p>
+                @Html.DisplayFor(model=>model.Nombre)
+            </p>
+            <p>
+                @Html.DisplayFor(model=>model.Apellido)
+            </p>
+            <p>
+                @Html.DisplayFor(model=>model.Edad)
+            </p>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <a class="btn btn-info" asp-controller="Home" asp-action="ListaAlumnos"> Regresar al listado</a>
+
+        </div>
+
+    </div>
+
+</body>
+
+

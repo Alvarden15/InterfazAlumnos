@@ -1,0 +1,26 @@
+@model IEnumerable<InterfazAlumnos.Models.Casa>
+@{
+    ViewData["Title"]="Listado de la casa";
+}
+
+<body>
+    <h1>Casas</h1>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <p>
+                    @Html.DisplayFor(modelItem=>item.Nombre)
+                </p>
+                <p>
+                    @Html.DisplayFor(modelItem=>item.Direccion)
+                </p>
+                <a asp-action="Casa" asp-controller="Home" asp-route-id="@item.Id" class="btn btn-info">
+                    Mostrar Detalles
+                </a>
+            </div>
+        }
+        
+
+    </div>
+</body>
